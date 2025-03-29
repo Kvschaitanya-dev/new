@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Wallpaper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out; /* Smooth transition */
+        }
+        h1 {
+            color: rgb(237, 6, 6);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 30%;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HAPPY ANNIVERSARY</h1>
+
+    <script>
+        // Array of background images
+        const backgrounds = [
+            'url("https://source.unsplash.com/random/1920x1080?nature,water")',
+            'url("https://source.unsplash.com/random/1920x1080?city,night")',
+            'url("https://source.unsplash.com/random/1920x1080?mountains,sunset")',
+            'url("https://source.unsplash.com/random/1920x1080?beach,ocean")',
+            'url("https://source.unsplash.com/random/1920x1080?forest,green")'
+        ];
+
+        let currentIndex = 0;
+
+        // Function to change background image every 5 seconds
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % backgrounds.length;
+            document.body.style.backgroundImage = backgrounds[currentIndex];
+        }
+
+        // Change background initially and then every 5 seconds
+        changeBackground();
+        setInterval(changeBackground, 5000);  // Change background every 5 seconds
+    </script>
+<div>
+
+
+    <h1 align="center" > 
+
+    <a href="cs.html" ><b>Click</b></a></h1>
+
+
+
+</div>
+</body>
+</html>
